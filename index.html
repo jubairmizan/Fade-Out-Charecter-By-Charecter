@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fade Out Charecter By Charecter</title>
+	<script src="http://code.jquery.com/jquery-3.3.1.js"></script>
+</head>
+<body>
+	<div><!-- First, solve the problem. Then, write the code. -->
+		<span id="F" style="display:none">F</span>
+		<span id="i" style="display:none">i</span>
+		<span id="r" style="display:none">r</span>
+		<span id="s" style="display:none">s</span>
+		<span id="t" style="display:none">t</span>
+
+		<span id="comma" style="display:none">,</span>
+		<span id="space" style="display:none">&nbsp;</span>
+
+		<span id="S" style="display:none">S</span>
+		<span id="o" style="display:none">o</span>
+		<span id="l" style="display:none">l</span>
+		<span id="v" style="display:none">v</span>
+		<span id="e" style="display:none">e</span>
+
+		<span id="Space" style="display:none">&nbsp;</span>
+
+		<span id="T" style="display:none">T</span>
+		<span id="H" style="display:none">h</span>
+		<span id="E" style="display:none">e</span>
+
+		<span id="SPace" style="display:none">&nbsp;</span>
+
+		<span id="P" style="display:none">P</span>
+		<span id="R" style="display:none">r</span>
+		<span id="O" style="display:none">o</span>
+		<span id="V" style="display:none">v</span>
+		<span id="pe" style="display:none">e</span>
+		<span id="L" style="display:none">l</span>
+		<span id="pE" style="display:none">e</span>
+		<span id="M" style="display:none">m</span>
+		<span id="dot" style="display:none">.</span>
+
+		<span id="SPAce" style="display:none">&nbsp;</span>
+
+		<span id="SPACe" style="display:none">&nbsp;</span>
+
+
+		<span id="pT" style="display:none">T</span>
+		<span id="pH" style="display:none">h</span>
+		<span id="PE" style="display:none">e</span>
+		<span id="pN" style="display:none">n</span>
+
+
+		<span id="Comma" style="display:none">,</span>
+		<span id="SPACe" style="display:none">&nbsp;</span>
+
+		<span id="pW" style="display:none">W</span>
+		<span id="pr" style="display:none">r</span>
+		<span id="pi" style="display:none">i</span>
+		<span id="pt" style="display:none">t</span>
+		<span id="ee" style="display:none">e &nbsp;</span>
+
+		<span id="eT" style="display:none">T</span>
+		<span id="eH" style="display:none">h</span>
+		<span id="eE" style="display:none">e &nbsp;</span>
+
+		<span id="eC" style="display:none">C</span>
+		<span id="eO" style="display:none">o</span>
+		<span id="eD" style="display:none">d &nbsp;</span>
+		<span id="EE" style="display:none">e &nbsp;</span>
+	</div>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			var child = $('div').children();
+			var i = 0;
+			setInterval(function() {
+				$('#' + $(child[i]).attr('id')).fadeIn();
+				i++;
+				if( i > child.length ){
+					window.clearInterval();
+				}
+			}, 100);
+		});
+	</script>
+</body>
+</html>

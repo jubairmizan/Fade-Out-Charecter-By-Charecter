@@ -5,6 +5,28 @@
 	<script src="http://code.jquery.com/jquery-3.3.1.js"></script>
 </head>
 <body>
-	<p id="sentenceForFadeOut" style="display:none">First, solve the problem. Then, write the code.</p>
+	<p id="sentenceForFadeOut"></p>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			var text = 'First, solve the problem. Then, write the code.';
+			var len = text.length;
+			var splitSen = text.split('');
+			// console.log(splitSen);
+
+			/*for (var i = 0; i < len; i++) {
+			    console.log(text.charAt(i));
+			}*/
+
+			var i = 0;
+			setInterval(function() {
+				$('#sentenceForFadeOut').append(splitSen[i]);
+				i++;
+				if(i > len){
+					window.clearInterval();
+				}
+			}, 100);
+		});
+	</script>
 </body>
 </html>

@@ -5,7 +5,7 @@
 	<script src="http://code.jquery.com/jquery-3.3.1.js"></script>
 </head>
 <body>
-	<div><!-- First, solve the problem. Then, write the code. -->
+	<div>
 		<span id="F" style="display:none">F</span>
 		<span id="i" style="display:none">i</span>
 		<span id="r" style="display:none">r</span>
@@ -76,9 +76,8 @@
 			setInterval(function() {
 				$('#' + $(child[i]).attr('id')).fadeIn();
 				i++;
-				if( i > child.length ){
+				if( i > child.length )
 					window.clearInterval();
-				}
 			}, 100);
 		});
 	</script>
